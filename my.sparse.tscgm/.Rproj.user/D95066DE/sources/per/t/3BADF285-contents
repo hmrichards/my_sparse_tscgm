@@ -1,0 +1,41 @@
+library(SparseTSCGM)
+library(longitudinal)
+library(dplyr)
+data("mammary")
+
+## Sample code
+
+# seed = 321
+# datas <- sim.data(model="ar1", time=10,n.obs=10, n.var=5,seed=seed,prob0=0.35,
+#                   network="random")
+# data.fit <-  datas$data1
+# prec_true <- datas$theta
+# autoR_true <- datas$gamma
+
+
+# res.tscgm <- sparse.tscgm(data=data.fit, lam1=NULL, lam2=NULL, nlambda=NULL, 
+#                           model="ar1", penalty="scad", optimality="bic_mod",
+#                           control=list(maxit.out = 10, maxit.in = 100))
+
+#Estimated sparse precision and autoregression matrices
+# prec <- res.tscgm$theta
+# autoR <- res.tscgm$gamma
+
+#Graphical visualization
+# par(mar=c(1,1,1,1), mfrow=c(2,2))
+# plot.tscgm(datas, mat="precision",main="True precision matrix")         
+# plot.tscgm(res.tscgm, mat="precision",main="Estimated precision matrix")     
+# plot.tscgm(datas, mat="autoregression",main="True autoregression coef. matrix")    
+# plot.tscgm(res.tscgm, mat="autoregression",
+#            main="Estimated autoregression coef. matrix") 
+
+mammary
+## Figure 2 code
+mam.tscgm <- sparse.tscgm(data=mammary, lam1=c(0.15, 0.93), lam2=c(0.15, 0.93), nlambda=1, 
+                          model="ar1", penalty="scad", optimality="bic",
+                          control=list(maxit.out = 3, maxit.in = 54))
+  
+par(mar = c(1.5,1.5, 1.5, 1.5), mfrow = c(1,2), cex = 0.5)
+plot.tscgm(mam.tscgm, mat="precision",main="Estimated precision matrix", mar = c(5,5))     
+plot.tscgm(mam.tscgm, mat="autoregression",
+           main="Estimated autoregression coef. matrix") 

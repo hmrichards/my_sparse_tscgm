@@ -1,0 +1,35 @@
+[
+    {
+        "file": "C:/Users/hrymr/Documents/Research Stuff/Summer 2021 Research/my.sparse.tscgm/src/stscgm-solveb.c",
+        "file_last_write": 1626213454.0,
+        "definitions": [
+            {
+                "usr": "c:@F@blasso#*d#S0_#S0_#*I#S1_#S0_#S0_#S1_#S0_#S1_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "blasso(double *, double *, double *, int *, int *, double *, double *, int *, double *, int *)",
+                "file": "C:/Users/hrymr/Documents/Research Stuff/Summer 2021 Research/my.sparse.tscgm/src/stscgm-solveb.c",
+                "line": 8,
+                "column": 6
+            },
+            {
+                "usr": "c:@F@make_mat#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "make_mat(int, int)",
+                "file": "C:/Users/hrymr/Documents/Research Stuff/Summer 2021 Research/my.sparse.tscgm/src/stscgm-solveb.c",
+                "line": 113,
+                "column": 10
+            },
+            {
+                "usr": "c:@F@delete_mat#**d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "delete_mat(double **)",
+                "file": "C:/Users/hrymr/Documents/Research Stuff/Summer 2021 Research/my.sparse.tscgm/src/stscgm-solveb.c",
+                "line": 123,
+                "column": 6
+            }
+        ]
+    }
+]

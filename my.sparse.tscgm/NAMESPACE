@@ -1,0 +1,4 @@
+useDynLib(my.sparse.tscgm, .registration=TRUE)
+exportPattern("^[[:alpha:]]+")
+export("my.sparse.tscgm")
+import(glasso,longitudinal, huge, MASS, mvtnorm, network, abind, stats, monomvn)
