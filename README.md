@@ -16,6 +16,9 @@ my.sparse.tscgm(data=dros.int1, lam1=NULL, lam2=NULL, nlambda=NULL,
 ```
 
 ```{r}
+library(SparseTSCGM)
+library(my.sparse.tscgm)
+
 data("mammary")
 my.sparse.tscgm(data = mammary, lam1=NULL, lam2=NULL,
                 model="ar1", penalty="scad", optimality="bic"
