@@ -21,7 +21,7 @@ library(my.sparse.tscgm)
 
 data("mammary")
 my.sparse.tscgm(data = mammary, lam1=NULL, lam2=NULL,
-                model="ar1", penalty="scad", optimality="bic"
+                model="ar1", penalty="scad", optimality="bic",
                 control = list(maxit.out = 2, maxit.in = 29))
 ```
 
